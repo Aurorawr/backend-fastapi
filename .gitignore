@@ -1,0 +1,40 @@
+# Entornos virtuales
+venv/
+.venv/
+env/
+ENV/
+
+# Variables de entorno y secretos
+.env
+.env.local
+.env.*.local
+*.pem
+
+# Caché y artefactos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Bases de datos locales
+*.db
+*.sqlite3
+*.sqlite
+
+# Configuración del editor e IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Archivos de registro y temporales
+*.log
+logs/
+build/
+dist/
+*.egg-info/
