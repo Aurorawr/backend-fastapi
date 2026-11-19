@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routes import authRoutes, testRoutes
+from routes import authRoutes, testRoutes, juegosRoutes
 
 app = FastAPI(
     title="Mi ejemplo de API",
@@ -11,7 +11,7 @@ app = FastAPI(
 
 # --- Configuración de CORS ---
 origins = [
-    "http://localhost:3000",
+    "http://localhost:5173",
     "https://miapp.com"
 ]
 
@@ -28,3 +28,4 @@ app.add_middleware(
 # --- Incluir rutas ---
 app.include_router(authRoutes.router)
 app.include_router(testRoutes.router)
+app.include_router(juegosRoutes.router)
