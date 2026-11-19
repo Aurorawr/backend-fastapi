@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routes import authRoutes, testRoutes, juegosRoutes
+from routes import authRoutes, testRoutes, juegosRoutes, comprasRoutes
 
 app = FastAPI(
     title="Mi ejemplo de API",
@@ -29,3 +29,4 @@ app.add_middleware(
 app.include_router(authRoutes.router)
 app.include_router(testRoutes.router)
 app.include_router(juegosRoutes.router)
+app.include_router(comprasRoutes.router)
